@@ -19,7 +19,8 @@
     />
   </head>
   <body>
-    <div class="add_new_btn_mobile_only">
+    <!-- btn on small screen size -->
+    <div class="add_new_btn_mobile_only d-md-none">
       <button
         class="btn btn-primary d-flex align-items-center gap-3"
         data-bs-toggle="modal"
@@ -48,7 +49,60 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <form>
+              <!-- img -->
+              <div class="mb-3">
+                <label for="imageUrl" class="form-label">Image URL</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  id="imageUrl"
+                  aria-describedby="imageDesc"
+                  placeholder="https://image.com/image.png"
+                />
+                <div id="imageDesc" class="form-text">
+                  Its a optional filed for you...
+                </div>
+              </div>
+              <!-- title -->
+              <div class="mb-3">
+                <label for="taskTitle" class="form-label">Task Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="taskTitle"
+                  placeholder="Task Title!"
+                  required
+                />
+              </div>
+              <!-- Task Type -->
+              <div class="mb-3">
+                <label for="taskTitle" class="form-label">Task Type</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="tags"
+                  placeholder="Task Type!"
+                  required
+                />
+              </div>
+              <!-- Task Despcription -->
+              <div class="mb-3">
+                <label for="taskDescription" class="form-label"
+                  >Task Description</label
+                >
+                <textarea
+                  type="text"
+                  class="form-control"
+                  id="TaskDescription"
+                  placeholder="Task Description!"
+                  required
+                  rows="3"
+                ></textarea>
+              </div>
+            </form>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
@@ -57,11 +111,12 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- nav bar -->
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">J0123P2-Build</a>

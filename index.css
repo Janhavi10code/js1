@@ -4,12 +4,19 @@
 }
 body {
   /* #ebf2ff */
-  background-color: rgba(122, 209, 231, 0.908) !important ;
+  background-color: #ebf2ff !important ;
 }
 .add_new_btn_mobile_only {
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
   padding: 15px 12px;
   background-color: white;
+  width:100%;
+  z-index: 3;
+}
+@media (min-width:760px){
+  .add_new_btn_mobile_only{
+    display:none;
+  }
 }
