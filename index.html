@@ -19,6 +19,15 @@
     />
   </head>
   <body>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#showTask"
+    >
+      Launch demo modal
+    </button>
+
     <!-- btn on small screen size -->
     <div class="add_new_btn_mobile_only d-md-none">
       <button
@@ -121,7 +130,7 @@
     <!-- open task modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="showTask"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -129,7 +138,9 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel"> Task Details</h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Task Details
+            </h1>
             <button
               type="button"
               class="btn-close"
