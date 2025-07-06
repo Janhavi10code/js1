@@ -81,13 +81,13 @@ const htmlTaskcontent = ({ id, title, description, type, url }) => `
 
 // Modal Body  on >> click of open Task
 const htmlModalcontent = ({ id, title, description, url }) => {
-  const date= new Date(parseInt(id));
+  const date = new Date(parseInt(id));
   return `
   <div id=${id}>
    ${
-        url &&
-        `<img width="100%" src=${url} alt="card image" class="img-fluid place_holder_image mb-3"/>`
-      }
+     url &&
+     `<img width="100%" src=${url} alt="card image" class="img-fluid place_holder_image mb-3"/>`
+   }
       <strong class="text-muted text-sm">Created on: ${date.toDatestring()}</strong>
       <h4 class="my-3">${title}</h4>
       <p class="text-muted">${description}</p>
@@ -95,13 +95,11 @@ const htmlModalcontent = ({ id, title, description, url }) => {
   `;
 };
 
-const updateLocalStorage=() =>{
+const updateLocalStorage = () => {
   localStorage.setItem(
     "task",
     JSON.stringify({
-      tasks:state.taskList,
+      tasks: state.taskList,
     })
   );
 };
-
-
